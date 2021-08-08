@@ -16,6 +16,8 @@ cd ios && pod install
 
 Follow **Tiktok** quickstart [documentation](https://developers.tiktok.com/doc/getting-started-ios-quickstart-objective-c). Please note 1 and 2 steps are not required!!
 
+Add `Privacy - Photo Library Additions Usage Description` permission to your **info.plist** in order to have an access to all your videos in your library.
+
 # Usage
 
 ```js
