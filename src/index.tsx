@@ -72,4 +72,7 @@ export const init = (key: string) => {
   }
 };
 
-export const events = new NativeEventEmitter(Tiktok);
+const addListener = (_listener: string, _event: any) => {};
+
+export const events =
+  Platform.OS === 'android' ? new NativeEventEmitter(Tiktok) : { addListener };
