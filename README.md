@@ -22,7 +22,7 @@ Add `Privacy - Photo Library Additions Usage Description` permission to your **i
 
 ### iOS
 
-I f you see some of these errors
+If you see some of these errors
 ```
 ld: warning: Could not find or use auto-linked library 'swiftCoreMIDI'
 ld: warning: Could not find or use auto-linked library 'swiftUniformTypeIdentifiers'
