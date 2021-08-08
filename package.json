@@ -1,6 +1,6 @@
 {
   "name": "react-native-tiktok",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Get authorized and fetch user profile, share videos",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
