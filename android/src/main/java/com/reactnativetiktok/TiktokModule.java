@@ -78,12 +78,10 @@ public class TiktokModule extends ReactContextBaseJavaModule {
       request.scope = "user.info.basic,video.list";
       request.callerLocalEntry = "com.reactnativetiktok.TikTokEntryActivity";
       tiktokOpenApi.authorize(request);
-      callBack.invoke("");
     }
 
     @ReactMethod
     public void share(String path, Callback callBack) {
       Share(path);
-      callBack.invoke("");
     }
 }
