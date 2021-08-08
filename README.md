@@ -28,7 +28,7 @@ ld: warning: Could not find or use auto-linked library 'swiftCoreMIDI'
 ld: warning: Could not find or use auto-linked library 'swiftUniformTypeIdentifiers'
 ld: warning: Could not find or use auto-linked library 'swiftWebKit'
 ```
-then add a new swift file to your project and enable bridging-hrader.
+Then add a new **swift** file to your project and enable **bridging-header**.
 
 # Usage
 
