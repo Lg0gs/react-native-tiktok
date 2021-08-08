@@ -18,6 +18,18 @@ Follow **Tiktok** quickstart [documentation](https://developers.tiktok.com/doc/g
 
 Add `Privacy - Photo Library Additions Usage Description` permission to your **info.plist** in order to have an access to all your videos in your library.
 
+## Troubleshooting
+
+### iOS
+
+I f you see some of these errors
+```
+ld: warning: Could not find or use auto-linked library 'swiftCoreMIDI'
+ld: warning: Could not find or use auto-linked library 'swiftUniformTypeIdentifiers'
+ld: warning: Could not find or use auto-linked library 'swiftWebKit'
+```
+then add a new swift file to your project and enable bridging-hrader.
+
 # Usage
 
 ```js
