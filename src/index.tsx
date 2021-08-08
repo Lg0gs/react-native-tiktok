@@ -35,7 +35,10 @@ export const auth = (
   });
 };
 
-export const share = (path: string, callback: (code: string) => void) => {
+export const share = (
+  path: string,
+  callback: (code: string | null) => void
+) => {
   Tiktok.share(path, (resp: number) => {
     if (Platform.OS === 'ios') {
       switch (resp) {
@@ -58,7 +61,7 @@ export const share = (path: string, callback: (code: string) => void) => {
           null;
       }
     } else {
-      callback('');
+      callback(null);
     }
   });
 };
