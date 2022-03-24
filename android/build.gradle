@@ -48,7 +48,7 @@ repositories {
         // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
         url("$rootDir/../node_modules/react-native/android")
     }
-    maven { url 'https://dl.bintray.com/aweme-open-sdk-team/public' }
+    maven { url "https://artifact.bytedance.com/repository/AwemeOpenSDK" }
     google()
     jcenter()
 }
@@ -56,5 +56,5 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
-    implementation group: 'com.bytedance.ies.ugc.aweme', name: 'open-sdk', version: '0.0.1.5'
+    implementation 'com.bytedance.ies.ugc.aweme:opensdk-oversea-external:0.2.0.2'
 }
