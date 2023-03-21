@@ -56,5 +56,5 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
-    implementation 'com.bytedance.ies.ugc.aweme:opensdk-oversea-external:0.2.0.2'
+    implementation 'com.bytedance.ies.ugc.aweme:opensdk-oversea-external:0.2.1.0'
 }

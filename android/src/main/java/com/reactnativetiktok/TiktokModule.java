@@ -7,13 +7,13 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.core.content.FileProvider;
 
-import com.bytedance.sdk.open.aweme.TikTokOpenApiFactory;
-import com.bytedance.sdk.open.aweme.TikTokOpenConfig;
-import com.bytedance.sdk.open.aweme.api.TiktokOpenApi;
-import com.bytedance.sdk.open.aweme.authorize.model.Authorization;
-import com.bytedance.sdk.open.aweme.base.TikTokMediaContent;
-import com.bytedance.sdk.open.aweme.base.TikTokVideoObject;
-import com.bytedance.sdk.open.aweme.share.Share;
+import com.bytedance.sdk.open.tiktok.TikTokOpenApiFactory;
+import com.bytedance.sdk.open.tiktok.TikTokOpenConfig;
+import com.bytedance.sdk.open.tiktok.api.TikTokOpenApi;
+import com.bytedance.sdk.open.tiktok.authorize.model.Authorization;
+import com.bytedance.sdk.open.tiktok.base.MediaContent;
+import com.bytedance.sdk.open.tiktok.base.VideoObject;
+import com.bytedance.sdk.open.tiktok.share.Share;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -30,14 +30,14 @@ public class TiktokModule extends ReactContextBaseJavaModule {
     public static final String NAME = "Tiktok";
 
     private void Share(String path) {
-      TiktokOpenApi tiktokOpenApi = TikTokOpenApiFactory.create(getReactApplicationContext());
+      TikTokOpenApi tiktokOpenApi = TikTokOpenApiFactory.create(getCurrentActivity());
       Share.Request request = new Share.Request();
       request.callerLocalEntry = "com.reactnativetiktok.TikTokEntryActivity";
       ArrayList<String> mUri = new ArrayList<>();
       mUri.add(getFileUri(path));
-      TikTokVideoObject videoObject = new TikTokVideoObject();
+      VideoObject videoObject = new VideoObject();
       videoObject.mVideoPaths = mUri;
-      TikTokMediaContent content = new TikTokMediaContent();
+      MediaContent content = new MediaContent();
       content.mMediaObject = videoObject;
       request.mMediaContent = content;
       tiktokOpenApi.share(request);
@@ -73,7 +73,7 @@ public class TiktokModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void auth(Callback callBack) {
-      TiktokOpenApi tiktokOpenApi = TikTokOpenApiFactory.create(getReactApplicationContext());
+      TikTokOpenApi tiktokOpenApi = TikTokOpenApiFactory.create(getCurrentActivity());
       Authorization.Request request = new Authorization.Request();
       request.scope = "user.info.basic";
       request.callerLocalEntry = "com.reactnativetiktok.TikTokEntryActivity";
