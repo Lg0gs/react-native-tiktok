@@ -75,7 +75,7 @@ public class TiktokModule extends ReactContextBaseJavaModule {
     public void auth(Callback callBack) {
       TiktokOpenApi tiktokOpenApi = TikTokOpenApiFactory.create(getReactApplicationContext());
       Authorization.Request request = new Authorization.Request();
-      request.scope = "user.info.basic,video.list";
+      request.scope = "user.info.basic";
       request.callerLocalEntry = "com.reactnativetiktok.TikTokEntryActivity";
       tiktokOpenApi.authorize(request);
     }
