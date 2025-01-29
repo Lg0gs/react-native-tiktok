@@ -79,7 +79,7 @@ android {
 
     namespace "tiktok.example"
     defaultConfig {
-        applicationId "tiktok.example"
+        applicationId "expo.modules.tiktok.example"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

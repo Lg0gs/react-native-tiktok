@@ -1,19 +1,18 @@
-import { useState, useEffect } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
-import { multiply } from 'react-native-tiktok';
+import { useEffect } from 'react';
+import { View, StyleSheet } from 'react-native';
+import { authorize } from 'react-native-tiktok';
 
 export default function App() {
-  const [result, setResult] = useState<number | undefined>();
-
   useEffect(() => {
-    multiply(3, 7).then(setResult);
+    authorize({
+      redirectURI: '<YOUR_REDIRECT_URL>',
+      listener: (authCode) => {
+        console.log(authCode);
+      },
+    });
   }, []);
 
-  return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
-  );
+  return <View style={styles.container} />;
 }
 
 const styles = StyleSheet.create({
@@ -21,5 +20,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'pink',
   },
 });

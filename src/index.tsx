@@ -1,22 +1,12 @@
-import { NativeModules, Platform } from 'react-native';
+import { NativeModules } from 'react-native';
 
-const LINKING_ERROR =
-  `The package 'react-native-tiktok' doesn't seem to be linked. Make sure: \n\n` +
-  Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
-  '- You rebuilt the app after installing the package\n' +
-  '- You are not using Expo Go\n';
+type Props = {
+  redirectURI: string;
+  listener(authCode: string): void;
+};
 
-const Tiktok = NativeModules.Tiktok
-  ? NativeModules.Tiktok
-  : new Proxy(
-      {},
-      {
-        get() {
-          throw new Error(LINKING_ERROR);
-        },
-      }
-    );
+const Tiktok = NativeModules.Tiktok;
 
-export function multiply(a: number, b: number): Promise<number> {
-  return Tiktok.multiply(a, b);
+export function authorize(props: Props): void {
+  return Tiktok.authorize(props.redirectURI, props.listener);
 }
