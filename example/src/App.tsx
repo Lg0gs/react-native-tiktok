@@ -9,6 +9,7 @@ export default function App() {
       callback: (authCode) => {
         console.log(authCode);
       },
+      codeVerifier: 'sQ6tdXroCIy746YBgCsNL9DqLJbwE88bBm-PzmB0BTc',
     });
   }, []);
 

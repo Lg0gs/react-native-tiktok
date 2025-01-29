@@ -104,6 +104,7 @@ import { authorize } from 'react-native-tiktok';
 
 authorize({
   redirectURI: '<YOUR_REDIRECT_URL>', // redirectURI is your universal link
+  codeVerifier: '', // Only for Android
   callback: (authCode) => {
   // immediately invokes callback function as soon as operation is completed
     console.log(authCode);
