@@ -6,7 +6,7 @@ export default function App() {
   useEffect(() => {
     authorize({
       redirectURI: '<YOUR_REDIRECT_URL>',
-      listener: (authCode) => {
+      callback: (authCode) => {
         console.log(authCode);
       },
     });
