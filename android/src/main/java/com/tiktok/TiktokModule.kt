@@ -1,5 +1,6 @@
 package com.tiktok
 
+import android.widget.Toast
 import android.content.Intent
 import android.content.pm.PackageManager
 import com.facebook.react.bridge.ActivityEventListener
@@ -21,7 +22,11 @@ class TiktokModule(reactContext: ReactApplicationContext) :
     reactContext.addActivityEventListener(object : ActivityEventListener {
       override fun onNewIntent(intent: Intent?) {
         authApi?.getAuthResponseFromIntent(intent, redirectUrl)?.let {
-          callback?.invoke(it.authCode)
+          if (it.authErrorDescription != null) {
+            Toast.makeText(reactApplicationContext, it.authErrorDescription, Toast.LENGTH_LONG).show()
+          } else {
+            callback?.invoke(it.authCode)
+          }
         }
       }
 
