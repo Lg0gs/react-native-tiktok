@@ -1,2 +1,2 @@
 // This file configures the entry file for your plugin.
-module.exports = require('./plugin/build/withTiktokKey');
+module.exports = require('./plugin/build/withTiktok');
