@@ -98,6 +98,18 @@ allprojects {
 
 > &lt;meta-data android:name="TikTokClientKey" android:value="<TIKTOK_CLIENT_KEY>"/&gt;
 
+# Expo Installation
+This step is pretty straightforward and includes modification of only `app.json` file
+
+```json{
+"expo": {
+  ...
+  "plugins": [
+    ["react-native-tiktok", { "tiktokClientKey": "<YOUR_TIKTOK_CLIENT_KEY>" }]
+  ]
+}
+```
+
 ## Usage
 ```js
 import { authorize } from 'react-native-tiktok';
