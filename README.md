@@ -105,7 +105,12 @@ This step is pretty straightforward and includes modification of only `app.json`
 "expo": {
   ...
   "plugins": [
-    ["react-native-tiktok", { "tiktokClientKey": "<YOUR_TIKTOK_CLIENT_KEY>" }]
+    [
+      "react-native-tiktok",
+      {
+        "tiktokClientKey": "<YOUR_TIKTOK_CLIENT_KEY>"
+      }
+    ]
   ]
 }
 ```
