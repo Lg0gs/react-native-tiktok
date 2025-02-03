@@ -2,7 +2,7 @@
 
 Get authorized and fetch user profile
 
-Version 2 uses modern Tiktok Open SDK and legacy API is dropped, if your RN version < 0.69 then please refer v1
+v2 uses modern Tiktok Open SDK and legacy API is dropped, if your RN version < 0.69 then please refer v1
 
 ## Prerequisites
 It's mandatory to provide [*`iOS Universal Link`*](https://developer.apple.com/documentation/xcode/allowing-apps-and-websites-to-link-to-your-content/) and [*`Android App Link`*](https://developer.android.com/training/app-links) to the Tiktok Developers Portal in order to Tiktok App to be able to call your App when the operation is completed.
