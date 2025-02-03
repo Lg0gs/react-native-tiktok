@@ -1,6 +1,6 @@
 {
   "name": "react-native-tiktok",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "description": "Get authorized using Tiktok",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
@@ -25,6 +25,7 @@
     "ios",
     "cpp",
     "*.podspec",
+    "tsconfig.json",
     "app.plugin.js",
     "plugin/build",
     "react-native.config.js",

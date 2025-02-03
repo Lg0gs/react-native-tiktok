@@ -18,7 +18,6 @@ Pod::Spec.new do |s|
   s.source         = { git: 'https://github.com/Lg0gs/react-native-tiktok' }
   s.static_framework = true
 
-  s.dependency 'ExpoModulesCore'
   s.dependency 'React-Core'
   s.dependency 'react-native-tiktok'
 
