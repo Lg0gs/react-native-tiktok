@@ -2,7 +2,7 @@
 
 Get authorized and fetch user profile
 
-Version 2.0.0 uses modern Tiktok Open SDK and legacy API is dropped, if your RN version < 0.69 then please refer v1.0.1
+v2 uses modern Tiktok Open SDK and legacy API is dropped, if your RN version < 0.69 then please refer v1
 
 ## Prerequisites
 It's mandatory to provide [*`iOS Universal Link`*](https://developer.apple.com/documentation/xcode/allowing-apps-and-websites-to-link-to-your-content/) and [*`Android App Link`*](https://developer.android.com/training/app-links) to the Tiktok Developers Portal in order to Tiktok App to be able to call your App when the operation is completed.
@@ -97,6 +97,23 @@ allprojects {
 
 
 > &lt;meta-data android:name="TikTokClientKey" android:value="<TIKTOK_CLIENT_KEY>"/&gt;
+
+# Expo Installation
+This step is pretty straightforward and includes modification of only `app.json` file
+
+```json{
+"expo": {
+  ...
+  "plugins": [
+    [
+      "react-native-tiktok",
+      {
+        "tiktokClientKey": "<YOUR_TIKTOK_CLIENT_KEY>"
+      }
+    ]
+  ]
+}
+```
 
 ## Usage
 ```js
