@@ -15,11 +15,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/Lg0gs/react-native-tiktok.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,mm,swift}"
-  if Dir.exist?("../expo")
-    s.dependency 'ExpoModulesCore'
-  else
-    s.exclude_files = "ios/ExpoAdapterTiktok/**/*"
-  end
+  s.dependency "ExpoModulesCore"
   s.dependency "TikTokOpenSDKCore"
   s.dependency "TikTokOpenAuthSDK"
   s.dependency "TikTokOpenShareSDK"
