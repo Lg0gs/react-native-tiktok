@@ -6,10 +6,9 @@ export default function App() {
   useEffect(() => {
     authorize({
       redirectURI: '<YOUR_REDIRECT_URL>',
-      callback: (authCode) => {
-        console.log(authCode);
+      callback: (authCode, codeVerifier) => {
+        console.log(authCode, codeVerifier);
       },
-      codeVerifier: 'sQ6tdXroCIy746YBgCsNL9DqLJbwE88bBm-PzmB0BTc',
     });
   }, []);
 
