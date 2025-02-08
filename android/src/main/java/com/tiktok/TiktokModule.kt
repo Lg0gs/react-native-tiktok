@@ -8,6 +8,7 @@ import com.facebook.react.bridge.Callback
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
+import com.facebook.react.bridge.ReadableArray
 import com.tiktok.open.sdk.auth.AuthApi
 import com.tiktok.open.sdk.auth.AuthRequest
 import com.tiktok.open.sdk.auth.utils.PKCEUtils
@@ -43,7 +44,7 @@ class TiktokModule(reactContext: ReactApplicationContext) :
   }
 
   @ReactMethod
-  fun authorize(redirectURI: String, callback: Callback) {
+  fun authorize(redirectURI: String, callback: Callback, scopes: ReadableArray? = null) {
     this.redirectUrl = redirectURI
     this.callback = callback
 
@@ -52,7 +53,7 @@ class TiktokModule(reactContext: ReactApplicationContext) :
 
     val request = AuthRequest(
       clientKey = clientKey!!,
-      scope = "user.info.basic",
+      scope = scopes?.toArrayList()?.joinToString() ?: "user.info.basic",
       redirectUri = redirectURI,
       codeVerifier = codeVerifier
     )
