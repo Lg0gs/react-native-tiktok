@@ -1,6 +1,8 @@
 
 ![banner](https://i.ibb.co/ZRQLsTq8/banner.webp)
 
+
+
 <p align="center">
 	<a href="https://github.com/Lg0gs/react-native-tiktok/blob/HEAD/LICENSE">
 		<img alt="GitHub License" src="https://img.shields.io/github/license/Lg0gs/react-native-tiktok" />
@@ -17,6 +19,8 @@
 		<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/Lg0gs/react-native-tiktok">
 	</a>
 </p>
+
+
 
 Get authorized and fetch user profile
 
