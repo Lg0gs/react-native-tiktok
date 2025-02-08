@@ -1,3 +1,5 @@
+![banner](https://files.oaiusercontent.com/file-AcMf2jF9MDCjSTBtbp1kdW?se=2025-02-08T07:41:09Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age=604800,%20immutable,%20private&rscd=attachment;%20filename=046f1457-edf3-4c02-a39a-885a0c3fe3a0.webp&sig=miu/LRKo7l4fcg9A/Oe6zxv234a2eJQUVzfnxtskmz4=)
+
 ## React Native Tiktok
 
 Get authorized and fetch user profile
