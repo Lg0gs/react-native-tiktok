@@ -119,12 +119,12 @@ This step is pretty straightforward and includes modification of only `app.json`
 
 ## Usage
 ```js
-import { authorize } from 'react-native-tiktok';
+import { authorize, Scopes } from 'react-native-tiktok';
 
 authorize({
-  redirectURI: '<YOUR_REDIRECT_URL>', // redirectURI is your universal link
+  redirectURI: '<YOUR_REDIRECT_URL>', // your universal link
+  scopes: [Scopes.user.info.basic, Scopes.video.list, ...], // optional: "user.info.basic" will be included by default
   callback: (authCode, codeVerifier) => {
-  // immediately invokes callback function as soon as operation is completed
   // codeVerifier is returned only on Android
     console.log(authCode, codeVerifier);
   },
