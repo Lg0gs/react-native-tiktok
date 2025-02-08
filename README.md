@@ -1,8 +1,6 @@
 ![banner](https://i.ibb.co/ZRQLsTq8/banner.webp)
 
-<p align="center">
 [![License](https://img.shields.io/npm/l/react-native-tiktok)](https://github.com/Lg0gs/react-native-tiktok?tab=MIT-1-ov-file#readme) [![version](https://img.shields.io/github/package-json/version/Lg0gs/react-native-tiktok)](https://github.com/Lg0gs/react-native-tiktok/releases) [![downloads](https://img.shields.io/npm/dm/react-native-tiktok)](https://www.npmjs.com/package/react-native-tiktok) ![size](https://img.shields.io/npm/unpacked-size/react-native-tiktok?color=F75307) [![stars](https://img.shields.io/github/stars/Lg0gs/react-native-tiktok)](https://github.com/Lg0gs/react-native-tiktok/stargazers)
-</p>
 
 Get authorized and fetch user profile
 
