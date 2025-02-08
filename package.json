@@ -1,6 +1,6 @@
 {
   "name": "react-native-tiktok",
-  "version": "2.1.14",
+  "version": "2.1.15",
   "description": "Get authorized using Tiktok",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
