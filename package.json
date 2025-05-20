@@ -6,7 +6,6 @@
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",
   "types": "./lib/typescript/module/src/index.d.ts",
-  "private": false,
   "exports": {
     ".": {
       "import": {
