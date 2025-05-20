@@ -16,7 +16,7 @@ class Tiktok: RCTEventEmitter {
         }
 
         if authResponse.errorCode == .noError {
-          callback([authResponse.authCode ?? ""])
+          callback([authResponse.code ?? ""])
         }
       }
     }
