@@ -29,5 +29,5 @@ const Tiktok = NativeModules.Tiktok;
 
 export function authorize(props: Props): void {
   const { redirectURI, callback, scopes } = props;
-  return Tiktok.authorize(redirectURI, callback, scopes);
+  return Tiktok.authorize(redirectURI, scopes, callback);
 }

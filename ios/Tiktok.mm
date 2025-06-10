@@ -5,8 +5,8 @@
 
 RCT_EXTERN_METHOD(
                   authorize: (NSString)redirectURI
-                  callback: (RCTResponseSenderBlock)callback
                   scopes:(NSArray * _Nullable)scopes
+                  callback: (RCTResponseSenderBlock)callback
                   )
 
 + (BOOL)requiresMainQueueSetup

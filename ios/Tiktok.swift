@@ -6,7 +6,7 @@ class Tiktok: RCTEventEmitter {
   let authRequest = TikTokAuthRequest(scopes: [], redirectURI: "")
 
   @objc
-  func authorize(_ redirectURI: String, callback: @escaping RCTResponseSenderBlock, scopes: [String]?) -> Void {
+  func authorize(_ redirectURI: String, scopes: [String]?, callback: @escaping RCTResponseSenderBlock) -> Void {
     DispatchQueue.main.async {
       self.authRequest.redirectURI = redirectURI
       self.authRequest.scopes = Set(scopes ?? ["user.info.basic"])
