@@ -3,7 +3,6 @@ package com.tiktok
 import android.widget.Toast
 import android.content.Intent
 import android.content.pm.PackageManager
-import com.facebook.react.bridge.ActivityEventListener
 import com.facebook.react.bridge.BaseActivityEventListener
 import com.facebook.react.bridge.Callback
 import com.facebook.react.bridge.ReactApplicationContext
