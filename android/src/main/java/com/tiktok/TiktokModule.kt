@@ -4,6 +4,7 @@ import android.widget.Toast
 import android.content.Intent
 import android.content.pm.PackageManager
 import com.facebook.react.bridge.ActivityEventListener
+import com.facebook.react.bridge.BaseActivityEventListener
 import com.facebook.react.bridge.Callback
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
@@ -22,8 +23,8 @@ class TiktokModule(reactContext: ReactApplicationContext) :
   private var callback: Callback? = null
 
   init {
-    reactContext.addActivityEventListener(object : ActivityEventListener {
-      override fun onNewIntent(intent: Intent?) {
+    reactContext.addActivityEventListener(object : BaseActivityEventListener() {
+      override fun onNewIntent(intent: Intent) {
         authApi?.getAuthResponseFromIntent(intent, redirectUrl)?.let {
           if (it.authErrorDescription != null) {
             Toast.makeText(reactApplicationContext, it.authErrorDescription, Toast.LENGTH_LONG).show()
