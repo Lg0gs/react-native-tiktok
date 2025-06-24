@@ -14,9 +14,9 @@ class Tiktok: RCTEventEmitter {
         guard let authResponse = response as? TikTokAuthResponse else {
           return
         }
-        let codeVerifier =  self.authRequest.pkce.codeVerifier
+
         if authResponse.errorCode == .noError {
-          callback([authResponse.authCode ?? "",codeVerifier])
+          callback([authResponse.authCode ?? "", self.authRequest.pkce.codeVerifier])
         }
       }
     }
