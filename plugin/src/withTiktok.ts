@@ -14,17 +14,30 @@ const withTiktok: ConfigPlugin<{ tiktokClientKey: string }> = (
   config = withInfoPlist(config, (config) => {
     // eslint-disable-next-line dot-notation
     config.modResults['TikTokClientKey'] = tiktokClientKey;
-    config.modResults.CFBundleURLTypes = [
-      {
-        CFBundleURLSchemes: [tiktokClientKey],
-      },
-    ];
-    config.modResults.LSApplicationQueriesSchemes = [
+
+    // Merge TikTok URL scheme with existing schemes instead of overwriting
+    const existingURLTypes = config.modResults.CFBundleURLTypes || [];
+    const tiktokURLType = { CFBundleURLSchemes: [tiktokClientKey] };
+    const hasScheme = existingURLTypes.some(
+      (urlType) =>
+        urlType.CFBundleURLSchemes &&
+        urlType.CFBundleURLSchemes.includes(tiktokClientKey)
+    );
+    if (!hasScheme) {
+      config.modResults.CFBundleURLTypes = [...existingURLTypes, tiktokURLType];
+    }
+
+    // Merge TikTok query schemes with existing schemes instead of overwriting
+    const tiktokSchemes = [
       'tiktokopensdk',
       'tiktoksharesdk',
       'snssdk1180',
       'snssdk1233',
     ];
+    const existingSchemes = config.modResults.LSApplicationQueriesSchemes || [];
+    const mergedSchemes = [...new Set([...existingSchemes, ...tiktokSchemes])];
+    config.modResults.LSApplicationQueriesSchemes = mergedSchemes;
+
     return config;
   });
 
